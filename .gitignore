@@ -1,0 +1,82 @@
+# AI Chatbot with Memory - Git Ignore
+
+# =============================================================================
+# ENVIRONMENT & SECRETS (NEVER COMMIT!)
+# =============================================================================
+
+# Environment variables (contains API keys!)
+.env
+
+# =============================================================================
+# PYTHON
+# =============================================================================
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# =============================================================================
+# DATA & MODELS
+# =============================================================================
+
+# FAISS index (large binary file)
+data/vector_store.faiss
+
+# Uploaded PDFs (user data)
+data/uploads/*.pdf
+data/uploads/*.PDF
+
+# Keep directories but ignore contents
+!data/uploads/.gitkeep
+!data/.gitkeep
+
+# =============================================================================
+# IDE & EDITORS
+# =============================================================================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# =============================================================================
+# OS FILES
+# =============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# =============================================================================
+# LOGS
+# =============================================================================
+
+*.log
+logs/

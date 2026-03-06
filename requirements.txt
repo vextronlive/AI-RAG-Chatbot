@@ -1,0 +1,98 @@
+# AI Chatbot with Memory - Requirements
+# Install with: pip install -r requirements.txt
+
+# =============================================================================
+# CORE DEPENDENCIES
+# =============================================================================
+
+# Web UI framework
+streamlit>=1.28.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# =============================================================================
+# FREE LLM OPTIONS (Choose one or more)
+# =============================================================================
+
+# --- OPTION 1: GROQ (Recommended - FREE tier!) ---
+# Fast inference, 1M tokens/day free
+# Get API key: https://console.groq.com/keys
+langchain-groq>=0.1.0
+
+# --- OPTION 2: OLLAMA (100% FREE - Local) ---
+# Runs models on your computer
+# Download: https://ollama.com/download
+langchain-ollama>=0.1.0
+
+# --- OPTION 3: OPENAI (Paid - optional) ---
+# langchain-openai>=0.0.5
+
+# =============================================================================
+# FREE EMBEDDINGS (HuggingFace - No API key needed!)
+# =============================================================================
+
+# HuggingFace embeddings - completely FREE!
+# Downloads model once (~80MB), then runs offline
+langchain-huggingface>=0.0.3
+
+# Required for HuggingFace embeddings
+sentence-transformers>=2.2.0
+torch>=2.0.0
+transformers>=4.30.0
+
+# --- OpenAI Embeddings (Paid - optional) ---
+# langchain-openai>=0.0.5
+
+# =============================================================================
+# VECTOR DATABASE
+# =============================================================================
+
+# FAISS for similarity search (FREE and open source)
+# Note: faiss-cpu is for CPU-only, use faiss-gpu for GPU support
+faiss-cpu>=1.7.4
+
+# =============================================================================
+# DOCUMENT PROCESSING
+# =============================================================================
+
+# PDF processing
+pypdf>=3.17.0
+
+# Text processing (needed by LangChain)
+tiktoken>=0.5.0
+
+# =============================================================================
+# LANGCHAIN ECOSYSTEM
+# =============================================================================
+
+# Core LangChain
+langchain>=0.1.0
+langchain-community>=0.0.10
+
+# =============================================================================
+# UTILITIES
+# =============================================================================
+
+# Data handling
+numpy>=1.24.0
+
+# Type hints support
+typing-extensions>=4.5.0
+
+# =============================================================================
+# NOTES FOR STUDENTS
+# =============================================================================
+
+# FREE SETUP (Recommended):
+# 1. Use GROQ for LLM (free tier: 1M tokens/day)
+# 2. Use HuggingFace for embeddings (completely free)
+# Total cost: $0!
+
+# INSTALL SIZE:
+# - HuggingFace model: ~80MB (downloaded once)
+# - PyTorch: ~500MB
+# - Total: ~600MB first install
+
+# To reduce install size (optional):
+# pip install torch --index-url https://download.pytorch.org/whl/cpu
